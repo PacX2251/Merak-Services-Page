@@ -1,0 +1,464 @@
+@import url('https://fonts.cdnfonts.com/css/cmu-serif');
+
+$temporal-background-color: #0a0a0a;
+$color-emphasis-1: #f3c355;
+$color-emphasis-2: #937b43;
+$border-red: 1px solid red;
+$border-salmon: 1px solid salmon;
+$border-green: 1px solid green;
+$border-blue: 1px solid blue;
+$border-yellow: 1px solid yellow;
+$border-purple: 1px solid purple;
+$border-orange: 1px solid orange;
+$border-pink: 1px solid pink;
+$border-cornflowerblue: 1px solid cornflowerblue;
+$border-rounded-images: 2px solid $color-emphasis-1;
+$NAVBAR-HEIGHT: 100px;
+$HORIZONTAL-PADDING: 50px;
+$PADDING-EXPERIENCES: 25px;
+$IMG-SERVICE-CARD: 270px;
+$LETTER-SPACING-TITLE: 16px;
+$TEXT-GAP: 25px;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'CMU Serif', 'Times New Roman', Times, serif;
+}
+
+.container-main-page {
+  max-width: 100vw;
+  background-color: $temporal-background-color;
+}
+
+// navbar
+
+.navbar {
+  &__container {
+    width: 100%;
+    height: $NAVBAR-HEIGHT;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 $HORIZONTAL-PADDING;
+    position: fixed;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    z-index: 1000;
+  }
+
+  &__img {
+    width: 250px;
+  }
+
+  &__menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    list-style-type: none;
+  }
+
+  &__item {
+    margin: 0 20px;
+  }
+
+  &__links {
+    text-decoration: none;
+    color: $color-emphasis-1;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    padding-bottom: 5px;
+
+    &:hover {
+      border-bottom: 2px solid $color-emphasis-1;
+    }
+  }
+}
+
+// main
+
+.main {
+  &__container {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(0deg, $temporal-background-color, #00000000 90%), url('img/background-merak.png');
+    background-size: cover;
+    position: relative;
+    padding: 0 $HORIZONTAL-PADDING;
+  }
+
+  &__img {
+    img {
+      width: 60vh;
+    }
+
+    width: 100%;
+    height: 100%;
+  }
+
+  &__arrow {
+    position: absolute;
+    bottom: 5vh;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &__wa {
+    position: absolute;
+    bottom: 5vh;
+    right: $HORIZONTAL-PADDING + 30px;
+
+    &-line-light {
+      background-color: $color-emphasis-1;
+      width: 160%;
+      height: 2px;
+      position: absolute;
+      right: -30px;
+      top: -5px;
+    }
+
+    &-line-dark {
+      height: 2px;
+      width: $HORIZONTAL-PADDING;
+      background-color: $color-emphasis-2;
+      position: absolute;
+      top: -5px;
+      right: -($HORIZONTAL-PADDING + 30px);
+    }
+
+    &-name {
+      color: $color-emphasis-1;
+      font-size: 1.2rem;
+    }
+  }
+
+  &__title {
+    width: 100%;
+    height: 100%;
+    color: $color-emphasis-1;
+
+    p {
+      font-size: 2.2rem;
+      font-weight: normal;
+      letter-spacing: 10px;
+      text-align: $LETTER-SPACING-TITLE;
+      position: relative;
+
+      &:after {
+        content: '';
+        display: block;
+        width: 30%;
+        height: 4px;
+        background-color: $color-emphasis-1;
+        margin-top: 36px;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+    }
+  }
+}
+
+.experiences {
+  &__container {
+    width: 100%;
+    height: fit-content;
+    position: relative;
+    padding: $NAVBAR-HEIGHT $HORIZONTAL-PADDING;
+  }
+
+  &__title {
+    color: $color-emphasis-1;
+    font-size: 2rem;
+    text-align: center;
+    width: fit-content;
+    padding: $PADDING-EXPERIENCES;
+    margin: 0 auto;
+  }
+
+  &__description {
+    color: $color-emphasis-1;
+    font-size: 1.2rem;
+    text-align: center;
+    width: 60%;
+    font-style: italic;
+    padding: $PADDING-EXPERIENCES;
+    margin: 0 auto;
+  }
+
+  &__imgCorpExp {
+    background-image: url('img/index/merak_experiences.png');
+    background-size: cover;
+    width: 100vh;
+    height: 50vh;
+    padding: $PADDING-EXPERIENCES;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    box-shadow: inset 0 0 50px 50px #0a0a0a;
+  }
+
+  &__cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: $PADDING-EXPERIENCES + 30px;
+    height: fit-content;
+  }
+
+  &__item {
+    width: $IMG-SERVICE-CARD;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &-description {
+      color: $color-emphasis-1;
+      font-style: italic;
+      font-size: 1.3rem;
+      margin: 2px 0;
+    }
+  }
+  &__img {
+    background-size: cover;
+    width: $IMG-SERVICE-CARD;
+    height: $IMG-SERVICE-CARD;
+    margin: 40px 0;
+    border-radius: 50%;
+  }
+  &__articulos{
+    background-image: url('img/index/Articulos.png');
+  }
+  &__regalos{
+    background-image: url('img/index/Regalos.png');
+  }
+  &__catering{
+    background-image: url('img/index/Catering.png');
+  }
+}
+
+
+// footer
+.footer {
+  &__container {
+    color: $color-emphasis-1;
+    width: 100%;
+    height: 100vh;
+    padding-top: $NAVBAR-HEIGHT;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__title {
+    font-size: 2rem;
+    width: fit-content;
+    padding: $PADDING-EXPERIENCES;
+  }
+
+  &__contact {
+    font-size: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 15px;
+    width: fit-content;
+
+    li {
+      list-style-type: none;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      img {
+        width: 30px;
+        margin-right: 20px;
+      }
+    }
+  }
+
+  &__social {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+    img {
+      width: 40px;
+      margin: 20px;
+    }
+  }
+  &__final{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+
+  &__top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 41%;
+  }
+
+  &__logo {
+    width: 25vh;
+  }
+
+  &__legal {
+    padding: $PADDING-EXPERIENCES;
+    text-align: center;
+  }
+
+  &__row{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+    justify-content: center;
+  }
+  &__rowimg{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 20%;
+    height: 8vw;
+    margin-left: 10px;
+    margin-right:20px ;
+    margin-top: 20px;
+  }
+  &__return{
+    display: flex;
+    color: $color-emphasis-1;
+    justify-content: center;
+    align-items: center;  
+  }
+
+}
+
+// about us
+.about-us {
+  &__container {
+
+    width: 100%;
+    height: fit-content;
+    position: relative;
+    padding: $NAVBAR-HEIGHT $HORIZONTAL-PADDING;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  &__description {
+    color: $color-emphasis-1;
+    display: flex;
+    flex-direction: column;
+    gap: $TEXT-GAP;
+    justify-content: center;
+    width: 50%;
+
+    &__title {
+      font-size: 2rem;
+      font-weight: lighter;
+    }
+
+    &__text {
+      font-size: 1.2rem;
+      font-weight: lighter;
+      line-height: 1.5;
+    }
+  }
+
+  &__images {
+    position: relative;
+    height: calc(100vh - $NAVBAR-HEIGHT);
+    width: 50%;
+
+    &-img1 {
+      border-radius: 50%;        width: 45vh;
+      height: 45vh;
+      background-image: url("img/nosotros/circulo2.png");
+      background-size: cover;
+      position: absolute;
+      top: 30px;
+      right: 50px;
+    }
+
+    &-img2 {
+      border-radius: 50%;
+      width: 45vh;
+      height: 45vh;
+      background-image: url("img/nosotros/circulo1.png");
+      background-size: cover;
+      position: absolute;
+      top: 180px;
+      right: 280px;
+    }
+
+    &-img3 {
+      width: 40vh;
+      height: 40vh;
+      background-image: url(img/full-logo-merak.png);
+      background-size: cover;
+      position: absolute;
+      top: 380px;
+      right: 180px;
+    }
+  }
+}
+
+
+// diferential
+
+.diferential {
+  &__container {
+    width: 100%;
+    height: fit-content;
+    position: relative;
+    padding: $NAVBAR-HEIGHT $HORIZONTAL-PADDING;
+  }
+
+  
+}
+
+
+.test-container {
+  width: 100%;
+  height: 100vh;
+}
+
+.centering {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* This will change the scrollbar for the whole webpage */
+::-webkit-scrollbar {
+  width: 10px;
+  /* width of the entire scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: $temporal-background-color;
+  /* color of the tracking area */
+}
+
+::-webkit-scrollbar-thumb {
+  background: $color-emphasis-1;
+  /* color of the scroll thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: $color-emphasis-1;
+  /* color of the scroll thumb on hover */
+}

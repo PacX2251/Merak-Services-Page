@@ -1,0 +1,18 @@
+.experiences {
+    &__img {
+        background-size: cover;
+        width: 270px;
+        height: 270px;
+        margin: 40px 0;
+        border-radius: 50%;
+    }
+    &-articulos {
+        background-image: url('../img/catalogo/Articulos-promocionales.png');
+    }
+    &-regalos {
+        background-image: url('../img/catalogo/Regalos-corporativos.png');
+    }
+    &-catering {
+        background-image: url('../img/catalogo/Catering.png');
+    }
+}

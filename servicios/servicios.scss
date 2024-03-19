@@ -1,0 +1,88 @@
+@import url('https://fonts.cdnfonts.com/css/cmu-serif');
+
+$color-emphasis-1: #f3c355;
+$color-bg-btn-catalogo: #131313;
+$HORIZONTAL_ARTICLE:80vw;
+$PADDING_SERVICES: 20px;
+$HORIZONTAL_GAP:60px;
+$VERTICAL_GAP:40px;
+
+.our__services{
+    color:$color-emphasis-1;
+    display: flex;
+    justify-content: space-evenly;
+    width: $HORIZONTAL_ARTICLE;
+    padding: $PADDING_SERVICES;
+    margin: 0 auto;
+    gap:$HORIZONTAL_GAP;
+    &__text{
+        text-align: justify;
+    }
+}
+
+.article{
+    &__category{
+    color:$color-emphasis-1;
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    gap: $VERTICAL_GAP;
+    }
+    &__container{
+        padding-left: 200px;
+        &__right{
+            padding-right: 200px;
+            padding-left: 0px;
+        }
+    }
+    &__description{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-top: 1.5px solid transparent;
+        border-image: linear-gradient(to left, $color-emphasis-1 0%, #000000 100%) 1;
+        margin-top: 20px;
+        &__right{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-top: 1.5px solid transparent;
+            border-image: linear-gradient(to right, $color-emphasis-1 0%, #000000 100%) 1;
+        }
+    }
+    &__title{
+        border-left: solid 1px $color-emphasis-1;
+        padding: 25px 0 0px 15px;
+        &__right{
+            border-right: solid 1px $color-emphasis-1;
+            border-left: 0px;
+            text-align: end;
+        }
+    }
+    &__img{
+        background-size: cover;
+        width: 600px;
+        height: 200px;
+        border: solid 0.5px $color-emphasis-1;
+    }
+    &-Articulos{
+        background-image: url('../img/servicios/Articulos.png');
+    }
+    &-Regalos{
+        background-image: url('../img/servicios/Regalos.png');
+    }
+    &-Catering{
+        background-image: url('../img/servicios/Catering.png');
+    }
+    &__text{
+        width: 500px;
+    }
+    &__btn{
+        background-color: $color-bg-btn-catalogo;
+        text-decoration: none;
+        color: $color-emphasis-1;
+        padding: 10px;
+        transform: rotate(90deg);
+        transform-origin: left top;
+    }
+}

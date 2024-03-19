@@ -1,0 +1,80 @@
+@import url("https://fonts.cdnfonts.com/css/cmu-serif");
+.our__services {
+  color: #f3c355;
+  display: flex;
+  justify-content: space-evenly;
+  width: 80vw;
+  padding: 20px;
+  margin: 0 auto;
+  gap: 60px;
+}
+.our__services__text {
+  text-align: justify;
+}
+
+.article__category {
+  color: #f3c355;
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  gap: 40px;
+}
+.article__container {
+  padding-left: 200px;
+}
+.article__container__right {
+  padding-right: 200px;
+  padding-left: 0px;
+}
+.article__description {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1.5px solid transparent;
+  border-image: linear-gradient(to left, #f3c355 0%, #000000 100%) 1;
+  margin-top: 20px;
+}
+.article__description__right {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1.5px solid transparent;
+  border-image: linear-gradient(to right, #f3c355 0%, #000000 100%) 1;
+}
+.article__title {
+  border-left: solid 1px #f3c355;
+  padding: 25px 0 0px 15px;
+}
+.article__title__right {
+  border-right: solid 1px #f3c355;
+  border-left: 0px;
+  text-align: end;
+}
+.article__img {
+  background-size: cover;
+  width: 600px;
+  height: 200px;
+  border: solid 0.5px #f3c355;
+}
+.article-Articulos {
+  background-image: url("../img/servicios/Articulos.png");
+}
+.article-Regalos {
+  background-image: url("../img/servicios/Regalos.png");
+}
+.article-Catering {
+  background-image: url("../img/servicios/Catering.png");
+}
+.article__text {
+  width: 500px;
+}
+.article__btn {
+  background-color: #131313;
+  text-decoration: none;
+  color: #f3c355;
+  padding: 10px;
+  transform: rotate(90deg);
+  transform-origin: left top;
+}
+
+/*# sourceMappingURL=servicios.css.map */

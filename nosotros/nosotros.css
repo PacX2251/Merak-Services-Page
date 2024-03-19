@@ -1,0 +1,51 @@
+.project-container {
+  width: 100%;
+  height: 100%;
+  margin-top: 8%;
+  margin-bottom: 20%;
+}
+
+.project-title-container {
+  text-align: center;
+}
+.project-title-container .project-title {
+  font-size: 5rem;
+  margin: 10px 20vw -40px;
+  color: #937b43;
+  z-index: 2;
+}
+
+.project-content {
+  position: relative;
+  margin-left: auto;
+}
+.project-content .project-details {
+  position: relative;
+  font-size: 20px;
+  line-height: 1.5;
+  color: #aaa;
+  z-index: 2;
+  padding: 3vw;
+  width: 90vw;
+  height: 30vw;
+  margin-left: auto;
+  background-color: #252525;
+}
+.project-content .project-details p {
+  color: #f3c355;
+  margin-left: 40%;
+}
+
+.project-img {
+  position: absolute;
+  background-image: url("../img/nosotros/Diferencial.png");
+  background-size: cover;
+  width: 43%;
+  height: 26vw;
+  margin-top: 6.5%;
+  justify-content: center;
+  align-items: center;
+  z-index: 5;
+}
+
+/*# sourceMappingURL=nosotros.css.map */

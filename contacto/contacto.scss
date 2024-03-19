@@ -1,0 +1,72 @@
+.contact {
+  &__container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    font-family: 'CMU Serif', 'Times New Roman', Times, serif;
+    color: #f3c355;
+    
+  }
+  &__left-col {
+    width: 40vw;
+    height: 100%;
+    background-image: url("../img/contact_right.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+  }
+  &__right-col {
+    width: 50vw;
+    height: 100vh;
+    padding: 4rem 7rem;
+
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+  }
+  #name, #email, #message, #phone  {
+    width: 100%;
+    margin-bottom: 20px;
+    font-size: large;
+  }
+  #message {
+    resize: none;
+    height: 5rem;
+  }
+  input, textarea {
+    &::placeholder { 
+        color: #f3c355; 
+        opacity: 1;
+    }
+    color:#f3c355;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #f3c355;
+    padding: 0.5rem ;
+    outline: none
+  }
+  
+  button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;    
+    color: #f3c355;
+    width: 10rem;
+    height: 2.25rem;
+    border: 1px solid #f3c355;
+    border-radius: 1px;
+    outline: none;
+    cursor: pointer;
+    margin-left: auto;
+  }
+  h1{
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  p{
+    margin-bottom: 20px;
+  }
+
+}
