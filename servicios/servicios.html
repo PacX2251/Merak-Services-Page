@@ -1,63 +1,85 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Servicios</title>
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="servicios.css" />
+    <link rel="icon" type="text" href="../img/full-logo-merak.png" />
+    <script href></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Servicios</title>
-  <link rel="stylesheet" href="../style.css">
-  <link rel="stylesheet" href="servicios.css">
-  <link rel="icon" type="text" href="../img/full-logo-merak.png">
-</head>
+  <body>
+    <!-- aplying BEM -->
 
-<body>
+    <div class="container-main-page">
+      <!-- navbar -->
+      <nav class="navbar">
+        <div class="navbar__container">
+          <a href="../index.html" id="navbar__logo">
+            <img class="navbar__img" src="../img/logo-merak.png" alt="logo" />
+          </a>
 
-  <!-- aplying BEM -->
-
-  <div class="container-main-page">
-
-    <!-- navbar -->
-    <nav class="navbar">
-      <div class="navbar__container">
-        <a href="../index.html" id="navbar__logo">
-          <img class="navbar__img" src="../img/logo-merak.png" alt="logo">
-        </a>
-
-        <!-- mobile menu 
+          <!-- mobile menu 
         <div class="navbar__toggle" id="mobile-menu">
           <span class="bar"></span> 
           <span class="bar"></span>
           <span class="bar"></span>
         </div> -->
-        <ul class="navbar__menu">
-          <li class="navbar__item">
-            <a href="../nosotros/nosotros.html" class="navbar__links" id="home-page">Nosotros</a>
-          </li>
-          <li class="navbar__item">
-            <a href="servicios.html" class="navbar__links" id="about-page">Servicios</a>
-          </li>
-          <li class="navbar__item">
-            <a href="../catalogo/catalogo.html" class="navbar__links" id="home-page">Catalogo</a>
-          </li>
-          <li class="navbar__item">
-            <a href="../contacto/contacto.html" class="navbar__links" id="about-page">Contacto</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-
-    <!-- main -->
-    <main class="main">
-      <div class="main__container">
-        <h1 class="main__title centering">
-          <p>SERVICIOS</p>
-        </h1>
-        <div class="main__arrow">
-          <svg xmlns="http://www.w3.org/2000/svg" width="66" height="36" viewBox="0 0 66 36" fill="none">
-            <path d="M2 2L33 33L64 2" stroke="#E6C067" stroke-width="3" />
-          </svg>
+          <ul class="navbar__menu">
+            <li class="navbar__item">
+              <a
+                href="../nosotros/nosotros.html"
+                class="navbar__links"
+                id="home-page"
+                >Nosotros</a
+              >
+            </li>
+            <li class="navbar__item">
+              <a href="servicios.html" class="navbar__links" id="about-page"
+                >Servicios</a
+              >
+            </li>
+            <li class="navbar__item">
+              <a
+                href="../catalogo/catalogo.html"
+                class="navbar__links"
+                id="home-page"
+                >Catalogo</a
+              >
+            </li>
+            <li class="navbar__item">
+              <a
+                href="../contacto/contacto.html"
+                class="navbar__links"
+                id="about-page"
+                >Contacto</a
+              >
+            </li>
+          </ul>
         </div>
-        <!--
+      </nav>
+
+      <!-- main -->
+      <main class="main">
+        <div class="main__container">
+          <h1 class="main__title centering">
+            <p>SERVICIOS</p>
+          </h1>
+
+          <div class="main__arrow">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="66"
+              height="36"
+              viewBox="0 0 66 36"
+              fill="none"
+            >
+              <path d="M2 2L33 33L64 2" stroke="#E6C067" stroke-width="3" />
+            </svg>
+          </div>
+          <!--
         <div class="main__wa">
           <div class="main__wa-line-light"></div>
           <div class="main__wa-line-dark"></div>
@@ -65,110 +87,130 @@
             Whatsapp
           </div>
         </div> -->
-      </div>
-    </main>
-
-    <!-- nuestros servicios -->
-    <section class="our__services">
-      <h1 class="our__services__title">Nuestros Servicios</h1>
-      <p class="our__services__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima provident animi
-        quidem deserunt eius saepe iusto. Consequuntur, quo a! Deserunt nemo laboriosam expedita delectus molestiae,
-        asperiores velit perferendis inventore corrupti. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae
-        autem distinctio magni suscipit tempore corrupti in quo earum assumenda ut sunt unde, facilis vero perspiciatis
-        tempora nemo laboriosam veritatis quasi?</p>
-    </section>
-
-    <!-- categorias de servicios -->
-    <section class="article__category">
-      <article class="article__container">
-        <h2 class="article__title">Artículos
-          <br>
-          promocionales
-        </h2>
-        <div class="article__description">
-          <a class="article__btn" href="">Catálogo</a>
-          <p class="article__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro ipsam inventore maxime
-            molestiae cum libero beatae consequuntur aliquam, illum distinctio vel nostrum ea voluptas quas, rem saepe
-            cupiditate quidem in.</p>
-          <div class="article__img  article-Articulos"></div>
         </div>
+      </main>
 
-      </article>
-      <article class="article__container__right">
-        <h2 class="article__title__right">Regalos
-          <br>
-          corporativos
-        </h2>
-        <div class="article__description__right">
-          <div class="article__img article-Regalos"></div>
-          <p class="article__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro ipsam inventore maxime
-            molestiae cum libero beatae consequuntur aliquam, illum distinctio vel nostrum ea voluptas quas, rem saepe
-            cupiditate quidem in.</p>
-          <a class="article__btn" href="">Catálogo</a>
-        </div>
+      <!-- nuestros servicios -->
+      <section class="our__services">
+        <h1 class="our__services__title">Nuestros Servicios</h1>
+        <p class="our__services__text">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima
+          provident animi quidem deserunt eius saepe iusto. Consequuntur, quo a!
+          Deserunt nemo laboriosam expedita delectus molestiae, asperiores velit
+          perferendis inventore corrupti. Lorem ipsum dolor sit amet consectetur
+          adipisicing elit. Quae autem distinctio magni suscipit tempore
+          corrupti in quo earum assumenda ut sunt unde, facilis vero
+          perspiciatis tempora nemo laboriosam veritatis quasi?
+        </p>
+      </section>
 
-      </article>
-      <article class="article__container">
-        <h2 class="article__title">Opciones
-          <br>
-          de catering
-        </h2>
-        <div class="article__description">
-          <a class="article__btn" href="">Catálogo</a>
-          <p class="article__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro ipsam inventore maxime
-            molestiae cum libero beatae consequuntur aliquam, illum distinctio vel nostrum ea voluptas quas, rem saepe
-            cupiditate quidem in.</p>
-          <div class="article__img article-Catering"></div>
-        </div>
-      </article>
-    </section>
-
-    <!-- footer -->
-
-    <footer class="footer" id="contacto">
-      <div class="footer__container">
-
-        <div class="footer__top">
-          <p class="footer__title">CONTACTO</p>
-          <ul class="footer__contact">
-            <li>
-              <img src="../img/icons/Message.png" alt="message icon">
-              <p>merak.servicio@gmail.com</p>
-            </li>
-            <li>
-              <img src="../img/icons/Phone.png" alt="phone icon">
-              <p>55 1853 4072</p>
-            </li>
-            <li>
-              <img src="../img/icons/Location.png" alt="Location icon">
-              <p>Ciudad de México</p>
-            </li>
-          </ul>
-          <div class="footer__social">
-            <img src="../img/icons/Facebook.png" alt="Facebook icon">
-            <img src="../img/icons/Instagram.png" alt="Instagram icon">
+      <!-- categorias de servicios -->
+      <section class="article__category">
+        <article class="article__container">
+          <h2 class="article__title">
+            Artículos
+            <br />
+            promocionales
+          </h2>
+          <div class="article__description">
+            <a class="article__btn" href="">Catálogo</a>
+            <p class="article__text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro
+              ipsam inventore maxime molestiae cum libero beatae consequuntur
+              aliquam, illum distinctio vel nostrum ea voluptas quas, rem saepe
+              cupiditate quidem in.
+            </p>
+            <div class="article__img article-Articulos"></div>
           </div>
-        </div>
-        <div class="footer__final">
-          <div class="footer__bottom">
-            <img class="footer__logo" src="../img/merak-logo-reduced.png" alt="logo merak">
-            <div class="footer__legal">
-              <p>Todos los derechos reservados.</p>
-              <p>© 2023 Merak Servicios. </p>
+        </article>
+        <article class="article__container__right">
+          <h2 class="article__title__right">
+            Regalos
+            <br />
+            corporativos
+          </h2>
+          <div class="article__description__right">
+            <div class="article__img article-Regalos"></div>
+            <p class="article__text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro
+              ipsam inventore maxime molestiae cum libero beatae consequuntur
+              aliquam, illum distinctio vel nostrum ea voluptas quas, rem saepe
+              cupiditate quidem in.
+            </p>
+            <a class="article__btn" href="">Catálogo</a>
+          </div>
+        </article>
+        <article class="article__container">
+          <h2 class="article__title">
+            Opciones
+            <br />
+            de catering
+          </h2>
+          <div class="article__description">
+            <a class="article__btn" href="">Catálogo</a>
+            <p class="article__text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro
+              ipsam inventore maxime molestiae cum libero beatae consequuntur
+              aliquam, illum distinctio vel nostrum ea voluptas quas, rem saepe
+              cupiditate quidem in.
+            </p>
+            <div class="article__img article-Catering"></div>
+          </div>
+        </article>
+      </section>
+
+      <!-- footer -->
+
+      <footer class="footer" id="contacto">
+        <div class="footer__container">
+          <div class="footer__top">
+            <p class="footer__title">CONTACTO</p>
+            <ul class="footer__contact">
+              <li>
+                <img src="../img/icons/Message.png" alt="message icon" />
+                <p>merak.servicio@gmail.com</p>
+              </li>
+              <li>
+                <img src="../img/icons/Phone.png" alt="phone icon" />
+                <p>55 1853 4072</p>
+              </li>
+              <li>
+                <img src="../img/icons/Location.png" alt="Location icon" />
+                <p>Ciudad de México</p>
+              </li>
+            </ul>
+            <div class="footer__social">
+              <img src="../img/icons/Facebook.png" alt="Facebook icon" />
+              <img src="../img/icons/Instagram.png" alt="Instagram icon" />
             </div>
           </div>
-
-          <div class="footer__row">
-            <div class="footer__return">
-              <p>Volver<br>al inicio</p>
+          <div class="footer__final">
+            <div class="footer__bottom">
+              <img
+                class="footer__logo"
+                src="../img/merak-logo-reduced.png"
+                alt="logo merak"
+              />
+              <div class="footer__legal">
+                <p>Todos los derechos reservados.</p>
+                <p>© 2023 Merak Servicios.</p>
+              </div>
             </div>
-            <img class="footer__rowimg" src="../img/icons/row.png" alt="row">
+
+            <div class="footer__row">
+              <div class="footer__return">
+                <p>Volver<br />al inicio</p>
+              </div>
+              <img
+                class="footer__rowimg"
+                src="../img/icons/row.png"
+                alt="row"
+              />
+            </div>
           </div>
         </div>
-      </div>
-    </footer>
-  </div>
-
-</body>
-
+      </footer>
+    </div>
+    <script src="servicios.js"></script>
+  </body>
 </html>

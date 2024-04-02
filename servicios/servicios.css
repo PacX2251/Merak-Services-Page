@@ -1,26 +1,40 @@
 @import url("https://fonts.cdnfonts.com/css/cmu-serif");
+
 .our__services {
+  
   color: #f3c355;
   display: flex;
   justify-content: space-evenly;
   width: 80vw;
-  padding: 20px;
-  margin: 0 auto;
+  margin: 30% auto 20px auto;
   gap: 60px;
 }
 .our__services__text {
   text-align: justify;
 }
 
+/* 
+.article__category {
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+.article__category.show {
+  opacity: 1;
+} */
 .article__category {
   color: #f3c355;
   display: flex;
   flex-direction: column;
-  margin-top: 50px;
+  margin: 10% auto 20px auto;
   gap: 40px;
+  
+    
 }
+
 .article__container {
-  padding-left: 200px;
+  /* padding-left:140px; */
+  margin: 0 auto 50px auto;
 }
 .article__container__right {
   padding-right: 200px;
@@ -44,8 +58,16 @@
 .article__title {
   border-left: solid 1px #f3c355;
   padding: 25px 0 0px 15px;
+  view-timeline-name: --article-title;
+  view-timeline-axis: block;
+  
+  animation-timeline: --article-title;
+  animation-name: show;
+
 }
+
 .article__title__right {
+  padding-right: 20px;
   border-right: solid 1px #f3c355;
   border-left: 0px;
   text-align: end;
@@ -75,6 +97,18 @@
   padding: 10px;
   transform: rotate(90deg);
   transform-origin: left top;
+}
+
+@keyframes show {
+  from { 
+    opacity: 0;
+    scale: 25%;
+  }
+
+  to {
+    opacity: 1;
+    scale: 100%;
+  }
 }
 
 /*# sourceMappingURL=servicios.css.map */
