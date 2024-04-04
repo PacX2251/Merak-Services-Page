@@ -58,7 +58,7 @@
   0% {
     filter: opacity(0); /* Oculto */
   }
-  80% {
+  50% {
     filter: opacity(0); /* Oculto */
   }
   100% {
@@ -72,7 +72,7 @@
   background-size: cover;
   position: relative;
   padding: 0 50px;
-  animation: desenfoque 2s forwards;
+  animation: desenfoque 1s forwards;
 }
 .main__img {
   width: 100%;
@@ -86,7 +86,7 @@
   bottom: 5vh;
   left: 50%;
   transform: translateX(-50%);
-  animation: aparicion 3s forwards;
+  animation: aparicion 2.25s forwards;
 }
 .main__wa {
   position: absolute;
@@ -117,7 +117,7 @@
   width: 100%;
   height: 100%;
   color: #f3c355;
-  animation: aparicion 2s forwards;
+  animation: aparicion 1.25s forwards;
 }
 .main__title p {
   font-size: 2.2rem;
@@ -136,7 +136,7 @@
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  animation: aparicion 2.5s forwards;
+  animation: aparicion 1.75s forwards;
 }
 
 .experiences__container {
@@ -274,13 +274,35 @@
   padding: 25px;
   text-align: center;
 }
+
 .footer__row {
   position: relative;
   display: flex;
   flex-direction: row;
   margin-left: auto;
   justify-content: center;
+  overflow: hidden;
+  view-timeline-name: --footer-return;
+  view-timeline-axis: block;
+  
+  animation-timeline: --footer-return;
+  animation-name: aparecer;
+  animation-range: entry 20% cover 30%;
+  animation-fill-mode: both;
 }
+
+@keyframes aparecer{
+  from { 
+    opacity: 1;
+    scale: 5%;
+  }
+
+  to {
+    opacity: 1;
+    scale: 100%;
+  }
+}
+
 .footer__rowimg {
   display: flex;
   flex-direction: row;
@@ -292,6 +314,7 @@
   margin-top: 20px;
 }
 .footer__return {
+  position: relative;
   display: flex;
   color: #f3c355;
   justify-content: center;
