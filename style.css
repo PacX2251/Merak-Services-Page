@@ -5,7 +5,9 @@
   box-sizing: border-box;
   font-family: "CMU Serif", "Times New Roman", Times, serif;
 }
-
+body{
+  scroll-behavior: smooth;
+}
 .container-main-page {
   max-width: 100vw;
   background-color: #0a0a0a;
@@ -329,7 +331,9 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  overflow: hidden;
 }
+
 .about-us__description {
   color: #f3c355;
   display: flex;
@@ -341,7 +345,15 @@
 .about-us__description__title {
   font-size: 2rem;
   font-weight: lighter;
+  transition: 0.75s ease;
+  transform: translateY(100%);
+  overflow: hidden;
 }
+
+.about-us__container:target .about-us__description__title{
+  transform: translateY(0%); 
+}
+
 .about-us__description__text {
   font-size: 1.2rem;
   font-weight: lighter;
@@ -380,6 +392,12 @@
   position: absolute;
   top: 380px;
   right: 180px;
+  transition: 1.25s ease;
+  transform: translateY(100%);
+  overflow: hidden;
+}
+.about-us__container:target .about-us__images-img3{
+  transform: translateY(0%); 
 }
 
 .diferential__container {

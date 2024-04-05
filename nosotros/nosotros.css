@@ -3,49 +3,75 @@
   height: 100%;
   margin-top: 8%;
   margin-bottom: 20%;
+  overflow: hidden;
 }
 
 .project-title-container {
   text-align: center;
 }
-.project-title-container .project-title {
+
+.project-title {
   font-size: 5rem;
-  margin: 10px 20vw -40px;
-  color: #937b43;
+  margin: 10px 20vw 0px;
+  color: #f3c455c5;
   z-index: 2;
+
+}
+
+@keyframes aparecer{
+  from { 
+    opacity: 1;
+    scale: 5%;
+  }
+
+  to {
+    opacity: 1;
+    scale: 100%;
+  }
 }
 
 .project-content {
   position: relative;
   margin-left: auto;
+  view-timeline-name: --project-tittle;
+  view-timeline-axis: block;
+  
+  animation-timeline: --project-tittle;
+  animation-name: aparecer;
+  animation-range: entry 20% cover 30%;
+  animation-fill-mode: both;
 }
 .project-content .project-details {
   position: relative;
   font-size: 20px;
   line-height: 1.5;
-  color: #aaa;
+  padding-right: 2%;
   z-index: 2;
-  padding: 3vw;
   width: 90vw;
   height: 30vw;
   margin-left: auto;
   background-color: #252525;
 }
 .project-content .project-details p {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  padding-right: 2%;
+  transform: translateY(-50%);
   color: #f3c355;
   margin-left: 40%;
 }
 
 .project-img {
   position: absolute;
+  top: 50%;
+  transform: translateY(-37%);
   background-image: url("../img/nosotros/Diferencial.png");
   background-size: cover;
+  background-position: center;
   width: 43%;
-  height: 26vw;
-  margin-top: 6.5%;
-  justify-content: center;
-  align-items: center;
-  z-index: 5;
+  height: 71%;
+  z-index: 3;
 }
 
 /*# sourceMappingURL=nosotros.css.map */
