@@ -30,13 +30,13 @@
         </div> -->
         <ul class="navbar__menu">
           <li class="navbar__item">
-            <a href="nosotros/nosotros.html" class="navbar__links" id="home-page">Nosotros</a>
+            <a href="nosotros/nosotros.html" class="navbar__links nosotros" id="home-page">Nosotros</a>
           </li>
           <li class="navbar__item">
             <a href="servicios/servicios.html" class="navbar__links" id="about-page">Servicios</a>
           </li>
           <li class="navbar__item">
-            <a href="catalogo/catalogo.html" class="navbar__links" id="home-page">Catalogo</a>
+            <a href="catalogo/catalogo.html" class="navbar__links" id="home-page">Catálogo</a>
           </li>
           <li class="navbar__item">
             <a href="contacto/contacto.html" class="navbar__links" id="about-page">Contacto</a>
@@ -52,15 +52,16 @@
           <img src="img/full-logo-merak.png" alt="bog logo">
         </div>
         <div class="main__arrow">
-          <svg xmlns="http://www.w3.org/2000/svg" width="66" height="36" viewBox="0 0 66 36" fill="none">
-            <path d="M2 2L33 33L64 2" stroke="#E6C067" stroke-width="3" />
-          </svg>
+          <a href="#experiences">
+            <svg xmlns="http://www.w3.org/2000/svg" width="66" height="36" viewBox="0 0 66 36" fill="none">
+              <path d="M2 2L33 33L64 2" stroke="#E6C067" stroke-width="3" />
+            </svg>
         </div>
         <div class="main__wa">
           <div class="main__wa-line-light"></div>
           <div class="main__wa-line-dark"></div>
           <div class="main__wa-name">
-            Whatsapp
+            <a href="https://www.whatsapp.com/" class="main__wa-name" target="_blank">Whatsapp</a>
           </div>
         </div>
       </div>
@@ -69,7 +70,7 @@
     <!-- experiencias / servicios -->
 
     <section class="experiences" id="servicios">
-      <div class="experiences__container">
+      <div class="experiences__container" id="experiences">
         <h3 class="experiences__title">EXPERIENCIAS CORPORATIVAS</h3>
         <p class="experiences__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
           voluptatum Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, explicabo!</p>
@@ -93,6 +94,11 @@
             <p class="experiences__item-description">Catering</p>
           </div>
         </div>
+      </div>
+      <div class="line-container">
+        <div class="line-top"></div>
+        <div class="line-text"> SERVICIOS</div>
+        <div class="line-bottom"></div>
       </div>
     </section>
 
@@ -120,8 +126,12 @@
             </li>
           </ul>
           <div class="footer__social">
-            <img src="img/icons/Facebook.png" alt="Facebook icon">
-            <img src="img/icons/Instagram.png" alt="Instagram icon">
+            <a href="https://www.facebook.com/" target="_blank">
+              <img src="img/icons/Facebook.png" alt="Facebook icon">
+            </a>
+            <a href="https://www.instagram.com/" target="_blank">
+              <img src="img/icons/Instagram.png" alt="Instagram icon">
+            </a>
           </div>
         </div>
         <div class="footer__final">
@@ -134,10 +144,12 @@
           </div>
 
           <div class="footer__row">
-            <div class="footer__return">
-              <p>Volver<br>al inicio</p>
-            </div>
-            <img class="footer__rowimg" src="img/icons/row.png" alt="row">
+            <a href="#servicios" class="footer__return">
+              <div class="footer__return">
+                <p>Volver<br>al inicio</p>
+              </div>
+              <img class="footer__rowimg" src="img/icons/row.png" alt="row">
+            </a>
           </div>
         </div>
       </div>
