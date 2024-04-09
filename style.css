@@ -52,25 +52,7 @@ body{
 .navbar__links.active {
   text-decoration: line-through; /* Aplica el tachado al enlace "Nosotros" si ha sido visitado */
 }
-@keyframes desenfoque {
-  0% {
-    filter: blur(20px); /* Desenfoque máximo al inicio */
-  }
-  100% {
-    filter: blur(0px); /* Sin desenfoque al final */
-  }
-}
-@keyframes aparicion {
-  0% {
-    filter: opacity(0); /* Oculto */
-  }
-  50% {
-    filter: opacity(0); /* Oculto */
-  }
-  100% {
-    filter: opacity(1); /* Aparicion */
-  }
-}
+
 .main__container {
   width: 100%;
   height: 100vh;
@@ -391,12 +373,12 @@ body{
   view-timeline-axis: block;
   
   animation-timeline: --footer-return;
-  animation-name: aparecer;
+  animation-name: grow;
   animation-range: entry 20% cover 30%;
   animation-fill-mode: both;
 }
 
-@keyframes aparecer{
+@keyframes grow{
   from { 
     opacity: 1;
     scale: 5%;
@@ -425,83 +407,6 @@ body{
   color: #f3c355;
   justify-content: center;
   align-items: center;
-}
-
-.about-us__container {
-  width: 100%;
-  height: fit-content;
-  position: relative;
-  padding: 100px 50px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  overflow: hidden;
-}
-
-.about-us__description {
-  color: #f3c355;
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
-  justify-content: center;
-  width: 50%;
-}
-.about-us__description__title {
-  font-size: 2rem;
-  font-weight: lighter;
-  transition: 0.75s ease;
-  transform: translateY(100%);
-  overflow: hidden;
-}
-
-.about-us__container:target .about-us__description__title{
-  transform: translateY(0%); 
-}
-
-.about-us__description__text {
-  font-size: 1.2rem;
-  font-weight: lighter;
-  line-height: 1.5;
-}
-.about-us__images {
-  position: relative;
-  height: calc(100vh - 100px);
-  width: 50%;
-}
-.about-us__images-img1 {
-  border-radius: 50%;
-  width: 45vh;
-  height: 45vh;
-  background-image: url("img/nosotros/circulo2.png");
-  background-size: cover;
-  position: absolute;
-  top: 30px;
-  right: 50px;
-}
-.about-us__images-img2 {
-  border-radius: 50%;
-  width: 45vh;
-  height: 45vh;
-  background-image: url("img/nosotros/circulo1.png");
-  background-size: cover;
-  position: absolute;
-  top: 180px;
-  right: 280px;
-}
-.about-us__images-img3 {
-  width: 40vh;
-  height: 40vh;
-  background-image: url(img/full-logo-merak.png);
-  background-size: cover;
-  position: absolute;
-  top: 380px;
-  right: 180px;
-  transition: 1.25s ease;
-  transform: translateY(100%);
-  overflow: hidden;
-}
-.about-us__container:target .about-us__images-img3{
-  transform: translateY(0%); 
 }
 
 .diferential__container {
@@ -544,3 +449,11 @@ body{
 }
 
 /*# sourceMappingURL=style.css.map */
+@keyframes desenfoque {
+  0% {
+    filter: blur(20px); /* Desenfoque máximo al inicio */
+  }
+  100% {
+    filter: blur(0px); /* Sin desenfoque al final */
+  }
+}
