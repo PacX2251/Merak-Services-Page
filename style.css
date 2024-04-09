@@ -1,4 +1,28 @@
-@import url("https://fonts.cdnfonts.com/css/cmu-serif");
+@keyframes blurry { /* Animacion de desenfoque al cargar la pagina */
+  0% {
+    filter: blur(20px); /* Desenfoque máximo al inicio */
+  }
+  100% {
+    filter: blur(0px); /* Sin desenfoque al final */
+  }
+}
+@keyframes smoothStart{ /* Animacion de aparicion al cargar la pagina */
+  0% {
+    filter: opacity(0); /* Oculto */
+  }
+  50% {
+    filter: opacity(0); /* Oculto */
+  }
+  100% {
+    filter: opacity(1); /* Aparicion */
+  }
+}
+
+
+@font-face{
+  font-family: "CMU Serif";
+  src: url("https://fonts.cdnfonts.com/s/19926/cmunrm.woff") format(woff)
+}
 * {
   margin: 0;
   padding: 0;
@@ -23,9 +47,13 @@ body{
   align-items: center;
   padding: 0 50px;
   position: fixed;
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  /*backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);*/
   z-index: 1000;
+  transition: background-color 0.2s ease;
+}
+.navbar__container.scrolled {
+  background-color: #000000; /* Color de fondo cuando se ha pasado una página */
 }
 .navbar__img {
   width: 250px;
@@ -60,7 +88,7 @@ body{
   background-size: cover;
   position: relative;
   padding: 0 50px;
-  animation: desenfoque 1s forwards;
+  animation: blurry 1s forwards;
 }
 .main__img {
   width: 100%;
@@ -74,7 +102,7 @@ body{
   bottom: 5vh;
   left: 50%;
   transform: translateX(-50%);
-  animation: aparicion 2.25s forwards;
+  animation: smoothStart 2.25s forwards;
 }
 .main__wa {
   position: absolute;
@@ -106,7 +134,7 @@ body{
   width: 100%;
   height: 100%;
   color: #f3c355;
-  animation: aparicion 1.25s forwards;
+  animation: smoothStart 1.25s forwards;
 }
 .main__title p {
   font-size: 2.2rem;
@@ -125,7 +153,7 @@ body{
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  animation: aparicion 1.75s forwards;
+  animation: smoothStart 1.75s forwards;
 }
 
 .experiences__container {
@@ -449,11 +477,3 @@ body{
 }
 
 /*# sourceMappingURL=style.css.map */
-@keyframes desenfoque {
-  0% {
-    filter: blur(20px); /* Desenfoque máximo al inicio */
-  }
-  100% {
-    filter: blur(0px); /* Sin desenfoque al final */
-  }
-}

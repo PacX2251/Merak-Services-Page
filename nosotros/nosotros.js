@@ -9,11 +9,16 @@ function isElementInViewport(el) {
   }
   
   function handleVisibility() {
-    var container = document.querySelector('.about-us__container');
+    var container = document.querySelector('.about-us__images-img3');
+    var container2 = document.querySelector('.about-us__description__title');
+    
     if (isElementInViewport(container)) {
       container.classList.add('visible');
-      window.removeEventListener('scroll', handleVisibility);
+      /*window.removeEventListener('scroll', handleVisibility);*/
+    }
+    if (isElementInViewport(container2)) {
+      container2.classList.add('visible');
     }
   }
-  
+
   window.addEventListener('scroll', handleVisibility);

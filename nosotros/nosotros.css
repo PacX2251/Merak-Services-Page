@@ -1,47 +1,27 @@
-@keyframes aparecer{
+@keyframes grow { /* Animacion de aparicion al cargar el contenido */
   from { 
-    opacity: 1;
-    scale: 5%;
+    opacity: 0;
+    scale: 25%;
   }
-
   to {
     opacity: 1;
     scale: 100%;
   }
 }
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(70px); /* Posición inicial */
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0); /* Posición final */
-  }
-}
-@keyframes fadeOp {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes aparicion {
+@keyframes goUp{ /* Animacion del titulo e imagen About Us */
   0% {
-    filter: opacity(0); /* Oculto */
-  }
-  50% {
-    filter: opacity(0); /* Oculto */
+      opacity: 0;
+      bottom: -100px; 
+      transform: translateY(100%);
   }
   100% {
-    filter: opacity(1); /* Aparicion */
+      opacity: 1; 
+      bottom: 20px; 
+      transform: translateY(0%);
   }
 }
-.about-us__container {
+
+.about-us__container__effect {
   width: 100%;
   height: fit-content;
   position: relative;
@@ -50,17 +30,17 @@
   flex-direction: row;
   justify-content: space-between;
   overflow: hidden;
+
   view-timeline-name: --about-us;
   view-timeline-axis: block;
   
   animation-timeline: --about-us;
   animation-name: grow;
-  animation-range: entry 20% cover 30%;
+  animation-range: entry 25% cover 50%;
   animation-fill-mode: both;
 }
-
 .about-us__description {
-  color: #f3c355;
+  color: #E6C067;
   display: flex;
   flex-direction: column;
   gap: 25px;
@@ -70,15 +50,12 @@
 .about-us__description__title {
   font-size: 2rem;
   font-weight: lighter;
-  /*transition: 0.75s ease;
-  transform: translateY(100%);
-  overflow: hidden;*/
+  opacity: 0;
 }
-/*
-.about-us__container:target .about-us__description__title{
-  transform: translateY(0%); 
+.about-us__description__title.visible{
+  transition: 1.25s ease;
+  animation: goUp 1s ease forwards;
 }
-*/
 .about-us__description__text {
   font-size: 1.2rem;
   font-weight: lighter;
@@ -115,18 +92,17 @@
   background-image: url(../img/full-logo-merak.png);
   background-size: cover;
   position: absolute;
-  top: 380px;
+  top: 380px; 
   right: 180px;
-  /*transition: 1.25s ease;
-  transform: translateY(100%);
-  overflow: hidden;*/
+  overflow: hidden;
+  opacity: 0;
+}
+.about-us__images-img3.visible {
+  transition: 1.25s ease;
+  animation: goUp 1s ease forwards;
 }
 
-/*
-.about-us__container:target .about-us__images-img3{
-  transform: translateY(0%); 
-}
-*/
+
 .project-container {
   width: 100%;
   height: 100%;
@@ -138,33 +114,23 @@
   
   animation-timeline: --project;
   animation-name: grow;
-  animation-range: entry 20% cover 30%;
+  animation-range: entry 25% cover 50%;
   animation-fill-mode: both;
 }
-
-
 .project-title-container {
   text-align: center;
 }
-
 .project-title {
   font-size: 5rem;
   margin: 10px 20vw 0px;
-  color: #f3c455c5;
+  color: #E6C067;
+  filter: brightness(40%);
   z-index: 2;
 
 }
-
 .project-content {
   position: relative;
   margin-left: auto;
-  view-timeline-name: --project-tittle;
-  view-timeline-axis: block;
-  
-  animation-timeline: --project-tittle;
-  animation-name: aparecer;
-  animation-range: entry 20% cover 30%;
-  animation-fill-mode: both;
 }
 .project-content .project-details {
   position: relative;
@@ -183,10 +149,9 @@
   top: 50%;
   padding-right: 2%;
   transform: translateY(-50%);
-  color: #f3c355;
+  color: #E6C067;
   margin-left: 40%;
 }
-
 .project-img {
   position: absolute;
   top: 50%;
