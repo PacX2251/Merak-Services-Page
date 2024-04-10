@@ -3,11 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Servicios</title>
+    <title>Regalos Coporativos</title>
     <link rel="stylesheet" href="../style.css" />
-    <link rel="stylesheet" href="./articulosPromocionales.css" />
+    <link rel="stylesheet" href="regalosCorporativos.css" />
     <link rel="icon" type="text" href="../img/full-logo-merak.png" />
-    <script href></script>
   </head>
 
   <body>
@@ -16,47 +15,27 @@
     <div class="container-main-page">
       <!-- navbar -->
       <nav class="navbar">
-        <div class="navbar__container">
+        <div class="navbar__container" id="navbar__container">
           <a href="../index.html" id="navbar__logo">
             <img class="navbar__img" src="../img/logo-merak.png" alt="logo" />
           </a>
-
           <ul class="navbar__menu">
             <li class="navbar__item">
-              <a
-                href="../nosotros/nosotros.html"
-                class="navbar__links"
-                id="home-page"
-                >Nosotros</a
-              >
+              <a href="nosotros.html" class="navbar__links" id="home-page">Nosotros</a>
             </li>
             <li class="navbar__item">
-              <a
-                href="servicios.html"
-                class="navbar__links active"
-                id="about-page"
-                >Servicios</a
-              >
+              <a href="../servicios/servicios.html" class="navbar__links" id="about-page">Servicios</a>
             </li>
             <li class="navbar__item">
-              <a
-                href="../catalogo/catalogo.html"
-                class="navbar__links"
-                id="home-page"
-                >Catálogo</a
-              >
+              <a href="../catalogo/catalogo.html" class="navbar__links active" id="home-page">Catálogo</a>
             </li>
             <li class="navbar__item">
-              <a
-                href="../contacto/contacto.html"
-                class="navbar__links"
-                id="about-page"
-                >Contacto</a
-              >
+              <a href="../contacto/contacto.html" class="navbar__links" id="about-page">Contacto</a>
             </li>
           </ul>
         </div>
       </nav>
+
 
       <!-- main -->
       <main class="main">
@@ -70,7 +49,7 @@
 
           <div class="main__arrow">
             <div class="main__arrow">
-              <a href="#quienessomos">
+              <a href="#navRute">
                 <svg xmlns="http://www.w3.org/2000/svg" width="66" height="36" viewBox="0 0 66 36" fill="none">
                   <path d="M2 2L33 33L64 2" stroke="#E6C067" stroke-width="3" />
                 </svg>            
@@ -80,6 +59,23 @@
         </div>
       </main>
 
+      <!-- Ruta de navegación -->
+      <div class="navRute" id="navRute">
+        <h2>Ruta de navegación:</h2>
+        <ul id="listaPaginasVisitadas"></ul>
+      </div>
+
+      <!-- Contenido -->
+      <div class="gifts__container">
+        <div class="gifts__container__effect">
+          <div class="gifts__description">
+            <h3 class="gifts__description__title">¿Quiénes somos?</h3>
+            <p class="gifts__description__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique eos
+              doloremque culpa nesciunt, assumenda praesentium non pariatur commodi voluptate iste nobis voluptatum ad
+              quas labore eaque amet omnis esse nostrum!</p>
+          </div>
+        </div>
+      </div>
 
       <!-- footer -->
 
@@ -139,6 +135,7 @@
         </div>
       </footer>
     </div>
-    <script src="servicios.js"></script>
+    <script src="regalosCorporativos.js"></script>
+    <script src="../index.js"></script>
   </body>
 </html>
