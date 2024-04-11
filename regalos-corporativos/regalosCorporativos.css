@@ -1,6 +1,5 @@
 @import url("https://fonts.cdnfonts.com/css/cmu-serif");
 
-
 /* Css Regalos Corporativos */
 .main_title_promotional{
   text-align: center;
@@ -30,13 +29,7 @@
   color: #f3c355;
 }
 .gifts__container__effect {
-  width: 100%;
-  height: fit-content;
-  position: relative;
   padding: 100px 50px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
   overflow: hidden;
   color: #f3c355;
 
@@ -45,41 +38,33 @@
   
   animation-timeline: --gifts;
   animation-name: grow;
-  animation-range: entry 25% cover 50%;
+  animation-range: entry 10% cover 10%;
   animation-fill-mode: both;
 }
-.gifts__description {
-  color: #E6C067;
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
-  justify-content: center;
-  width: 50%;
-}
-.gifts__description__title {
-  font-size: 2rem;
-  font-weight: lighter;
-  opacity: 1;
-}
-.gifts__description__title.visible{
-  transition: 1.25s ease;
-  animation: goUp 1s ease forwards;
-}
-.gifts__description__text {
-  font-size: 1.2rem;
-  font-weight: lighter;
-  line-height: 1.5;
-}
-@keyframes show {
-  from { 
-    opacity: 0;
-    scale: 25%;
-  }
+.paquetes__mosaico{
+  height: 67vh;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(100, 1fr);
+  grid-gap: 5px;
 
-  to {
-    opacity: 1;
-    scale: 100%;
-  }
+}
+.paquete{
+  margin-bottom: 5px;
+}
+.paquete img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.s{
+  grid-row: span 30;
+}
+.m{
+  grid-row: span 35;
+}
+.l{
+  grid-row: span 45;
 }
 
 /*# sourceMappingURL=servicios.css.map */
