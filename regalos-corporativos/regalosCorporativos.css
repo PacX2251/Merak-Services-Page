@@ -28,11 +28,14 @@
 .navRute{
   color: #f3c355;
 }
+.gifts__container{
+  align-content: center;
+}
 .gifts__container__effect {
-  padding: 100px 50px;
-  overflow: hidden;
-  color: #f3c355;
+  align-content: center;
+  width: fit-content;
 
+  margin: auto;
   view-timeline-name: --gifts;
   view-timeline-axis: block;
   
@@ -42,29 +45,82 @@
   animation-fill-mode: both;
 }
 .paquetes__mosaico{
-  height: 67vh;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(100, 1fr);
-  grid-gap: 5px;
+  display: flex;
 
+  gap: 20px;
 }
-.paquete{
-  margin-bottom: 5px;
+.column{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 .paquete img{
   height: 100%;
   width: 100%;
   object-fit: cover;
+  border-radius: 5px;
 }
 .s{
-  grid-row: span 30;
+  height: 150px;
 }
 .m{
-  grid-row: span 35;
+  height: 200px;
 }
 .l{
-  grid-row: span 45;
+  height: 250px;
 }
-
+@media(max-width:768px){
+  .s{
+    height: 100px;
+  }
+  .m{
+    height: 150px;
+  }
+  .l{
+    height: 200px;
+  }
+  .paquetes__mosaico{
+    flex-direction: column;
+  }
+}
+@media(max-width:480px){
+  .s{
+    height: 70px;
+  }
+  .m{
+    height: 120px;
+  }
+  .l{
+    height: 150px;
+  }
+  .paquetes__mosaico{
+    flex-direction: column;
+  }
+}
+.paquete{
+  position: relative;
+}
+.paquete .overlay{
+  position: absolute;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); 
+  color:#E6C067;
+  opacity: 0;
+  transition: opacity 0.3s ease; 
+  text-align: left;
+  bottom: 0;
+  left: 0;
+}
+.paquete:hover .overlay {
+  opacity: 1; /* Hacer visible cuando se hace hover */
+}
+.paquete:hover img {
+  filter: brightness(50%); /* Oscurecer la imagen cuando se hace hover */
+}
+.p{
+  padding: 0;
+}
 /*# sourceMappingURL=servicios.css.map */
