@@ -19,8 +19,7 @@
   text-decoration: none;
   color: #f3c355;
   font-size: 1.2rem;
-  padding: 20px;
-  padding-bottom: 5px;
+  padding: 10px;
   border-bottom: 1px solid #f3c355;
 }
 
@@ -33,7 +32,14 @@
   border-bottom: 2px solid #f3c355;
 } */
 
-
+.path_category {
+  /* padding-left:140px; */
+  color: #f3c355;
+  /* margin-left: 50px; */
+  margin-left: 120px;
+  margin-bottom: 50px;
+}
+/*------------------*/
 .our__services {
   
   color: #f3c355;
@@ -56,112 +62,122 @@
   
     
 }
-
-
-
-.article__container {
-  /* padding-left:140px; */
-  
-  margin-left: 50px;
-  padding-left: 30px;
-  margin-bottom: 50px;
-}
-.article__container__right {
-  /* padding-right: 200px; */
-  padding-left: 0px;
-}
-.article__description {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border-top: 1.5px solid transparent;
-  border-image: linear-gradient(to left, #f3c355 0%, #000000 100%) 1;
-  margin-top: 20px;
-}
-.article__description__right {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border-top: 1.5px solid transparent;
-  border-image: linear-gradient(to right, #f3c355 0%, #000000 100%) 1;
+.gifts__container {
+  align-content: center;
 }
 
-.article__title {
-  border-left: solid 1px #f3c355;
-  padding: 30px 0 0px 15px;
-  view-timeline-name: --article-title;
+.gifts__container__effect {
+  align-content: center;
+  width: fit-content;
+
+  margin: auto;
+  view-timeline-name: --gifts;
   view-timeline-axis: block;
-  
-  animation-timeline: --article-title;
-  animation-name: show;
-  animation-range: entry 25% cover 50%;
+
+  animation-timeline: --gifts;
+  animation-name: grow;
+  animation-range: entry 10% cover 10%;
   animation-fill-mode: both;
 }
 
-.article__title__right {
-  padding-right: 30px;
-  padding-bottom: 30px;
-  margin-right: 90px;
-  border-right: solid 1px #f3c355;
-  border-left: 0px;
-  text-align: end;
+.paquetes__mosaico {
+  display: flex;
 
-  view-timeline-name: --article-title-right;
-  view-timeline-axis: block;
-  
-  animation-timeline: --article-title-right;
-  animation-name: show;
-  animation-range: entry 25% cover 50%;
-  animation-fill-mode: both;
+  gap: 20px;
 }
-.article__img {
-  background-size: cover;
-  width: 700px;
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.paquete img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.s {
+  height: 150px;
+}
+
+.m {
   height: 200px;
-  border: solid 0.5px #f3c355;
-}
-.article-Articulos {
-  background-image: url("../img/servicios/Articulos.png");
-}
-.article-Regalos {
-  background-image: url("../img/servicios/Regalos.png");
-}
-.article-Catering {
-  background-image: url("../img/servicios/Catering.png");
-}
-.article__text {
-  width: 500px;
-}
-.article__btn {
-  background-color: #131313;
-  text-decoration: none;
-  color: #f3c355;
-  padding: 10px;
-  margin-top: 40px;
-  margin-left: 38px;
-  transform: rotate(-90deg);
-  transform-origin: left bottom;
 }
 
-.article__btn_right {
-  background-color: #131313;
-  text-decoration: none;
-  color: #f3c355;
-  padding: 10px;
-  transform: rotate(90deg);
-  transform-origin: left top;
+.l {
+  height: 250px;
 }
 
-@keyframes show {
-  from { 
-    opacity: 0;
-    scale: 25%;
+@media(max-width:768px) {
+  .s {
+    height: 100px;
   }
 
-  to {
-    opacity: 1;
-    scale: 100%;
+  .m {
+    height: 150px;
   }
+
+  .l {
+    height: 200px;
+  }
+
+  .paquetes__mosaico {
+    flex-direction: column;
+  }
+}
+
+@media(max-width:480px) {
+  .s {
+    height: 70px;
+  }
+
+  .m {
+    height: 120px;
+  }
+
+  .l {
+    height: 150px;
+  }
+
+  .paquetes__mosaico {
+    flex-direction: column;
+  }
+}
+
+.paquete {
+  position: relative;
+}
+
+.paquete .overlay {
+  position: absolute;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #E6C067;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  text-align: left;
+  bottom: 0;
+  left: 0;
+}
+
+.paquete:hover .overlay {
+  opacity: 1;
+  /* Hacer visible cuando se hace hover */
+}
+
+.paquete:hover img {
+  filter: brightness(50%);
+  /* Oscurecer la imagen cuando se hace hover */
+}
+
+.p {
+  padding: 0;
 }
 
 /*# sourceMappingURL=servicios.css.map */
