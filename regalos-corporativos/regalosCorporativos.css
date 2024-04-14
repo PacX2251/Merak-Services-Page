@@ -25,17 +25,15 @@
   background-color: rgba(94, 91, 91, 0.37);
   /* Aplica el tachado al enlace "Nosotros" si ha sido visitado */
 }
-.navRute{
-  color: #f3c355;
-}
 .gifts__container{
   align-content: center;
 }
 .gifts__container__effect {
   align-content: center;
   width: fit-content;
-
   margin: auto;
+  margin-top: 20vh;
+  
   view-timeline-name: --gifts;
   view-timeline-axis: block;
   
@@ -44,9 +42,13 @@
   animation-range: entry 10% cover 10%;
   animation-fill-mode: both;
 }
+.navRute{
+  display: flex;
+  color: #f3c355;
+  padding-bottom: 3vh;
+}
 .paquetes__mosaico{
   display: flex;
-
   gap: 20px;
 }
 .column{
@@ -60,6 +62,7 @@
   object-fit: cover;
   border-radius: 5px;
 }
+
 .s{
   height: 150px;
 }
@@ -69,26 +72,23 @@
 .l{
   height: 250px;
 }
-@media(max-width:768px){
+@media(max-width:1560px){
   .s{
-    height: 100px;
+    height: 90px;
+  }
+  .m{
+    height: 140px;
+  }
+  .l{
+    height: 190px;
+  }
+}
+@media(max-width:650px){
+  .s{
+    height: 150px;
   }
   .m{
     height: 150px;
-  }
-  .l{
-    height: 200px;
-  }
-  .paquetes__mosaico{
-    flex-direction: column;
-  }
-}
-@media(max-width:480px){
-  .s{
-    height: 70px;
-  }
-  .m{
-    height: 120px;
   }
   .l{
     height: 150px;
@@ -112,15 +112,13 @@
   transition: opacity 0.3s ease; 
   text-align: left;
   bottom: 0;
-  left: 0;
+  display: table-cell;
+  vertical-align: middle;
 }
 .paquete:hover .overlay {
   opacity: 1; /* Hacer visible cuando se hace hover */
 }
 .paquete:hover img {
   filter: brightness(50%); /* Oscurecer la imagen cuando se hace hover */
-}
-.p{
-  padding: 0;
 }
 /*# sourceMappingURL=servicios.css.map */
