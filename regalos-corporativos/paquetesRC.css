@@ -23,7 +23,6 @@
 }
 .navbar__links_categoryactive {
   background-color: rgba(94, 91, 91, 0.37);
-  /* Aplica el tachado al enlace "Nosotros" si ha sido visitado */
 }
 .gifts__container{
   align-content: center;
@@ -32,8 +31,12 @@
 .gifts__container__effect {
   align-content: center;
   width: fit-content;
+  height: fit-content;
   margin: auto;
   margin-top: 20vh;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 25vh;
   
   view-timeline-name: --gifts;
   view-timeline-axis: block;
@@ -44,22 +47,61 @@
   animation-fill-mode: both;
 }
 .navRute{
+  grid-column: 1;
   display: flex;
   color: #f3c355;
   padding-bottom: 3vh;
 }
 .paquete_seleccion{
-  width: 40%;
-  height: 50vh;
+  grid-column: 1;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 40px;
+  grid-template-columns: 150px 150px 150px 150px; 
+  grid-template-rows: 90px 90px 90px 90px 160px; 
+  gap: 20px;
 }
 .pic img{
-  width: 100%; /* Ajusta el ancho de las imágenes al 100% del contenedor */
-  height: auto;
+  width: 100%; 
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
 }
 .uno{
   grid-row: span 4;
   grid-column: span 4;
+  width: 100%; 
+  height: 100%;
+}
+.uno:hover img{
+  transform: scale(1.2);
+  cursor: zoom-in;
+}
+.more:hover img{
+  filter: brightness(50%);
+  cursor: pointer;
+}
+
+.desc_seleccion{
+  color: #f3c355;
+  grid-column: 2;
+  font-size: 1.3rem;
+}
+
+@media(max-width:1560px){
+  .paquete_seleccion{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: 100px 100px 100px 100px; 
+    grid-template-rows: 50px 50px 50px 50px 100px; 
+    gap: 20px;
+  }
+}
+@media(max-width:650px){
+  .paquete_seleccion{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: 80px 80px 80px 80px; 
+    grid-template-rows: 40px 40px 40px 40px 80px; 
+    gap: 20px;
+  }
 }

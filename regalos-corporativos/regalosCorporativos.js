@@ -161,18 +161,42 @@ function captureParentName(element) {
       },
     }
 
+    var ruteContainer = document.getElementById('navRute');
+    ruteContainer.innerHTML = '';
+    var ruteItem = document.createElement('div');
+    ruteItem.classList.add('navRute')
+    ruteItem.innerHTML = '<h3>Catalogo > Regalos Corporativos > ' + packing[productoIndex].nombre + '</h3>'
+    ruteContainer.appendChild(ruteItem);
+
     var gridContainer = document.getElementById('paquete_seleccion');
-    gridContainer.innerHTML = ''; // Limpiar el contenido anterior
+    gridContainer.innerHTML = '';
+    
+    var descContainer = document.getElementById('desc_seleccion');
+    descContainer.innerHTML = '';
+    var descItem = document.createElement('div');
+    descItem.classList.add('desc_seleccion')
+    descItem.innerHTML = '<h2>'+ packing[productoIndex].nombre +'</h2><p>'+ packing[productoIndex].descripcion +'</p>'
+    descContainer.appendChild(descItem);
   
-    // Iterar sobre las imágenes del producto seleccionado
     for (var i = 0; i < packing[productoIndex].imagenes.length; i++) {
       var imagenUrl = packing[productoIndex].imagenes[i];
       var gridItem = document.createElement('div');
       gridItem.classList.add('pic');
       if (i === 0){
         gridItem.classList.add('uno');
+        gridItem.innerHTML = '<img src="' + imagenUrl + '" alt="Imagen ' + (i + 1) + '" id="imagen' + (i + 1) + '">'; // Agregar la imagen al grid        
       }
-      gridItem.innerHTML = '<img src="' + imagenUrl + '" alt="Imagen ' + (i + 1) + '" onclick="actualizarImagen(\'' + imagenUrl + '\')">'; // Agregar la imagen al grid
+      if (i > 0){
+        gridItem.classList.add('more');
+        gridItem.innerHTML = '<img src="' + imagenUrl + '" alt="Imagen ' + (i + 1) + '" id="imagen' + (i + 1) + '" onclick="actualizarImagen(\'' + imagenUrl + '\')">'; // Agregar la imagen al grid
+      }
+      
+      
       gridContainer.appendChild(gridItem);
     }
   }
+
+function actualizarImagen(nuevaImagen) {
+  var imagen1 = document.getElementById('imagen1');
+  imagen1.src = nuevaImagen;
+}
