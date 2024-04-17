@@ -29,6 +29,7 @@
   position: relative;
 }
 .gifts__container__effect {
+  color: #f3c355;
   align-content: center;
   width: fit-content;
   height: fit-content;
@@ -104,4 +105,59 @@
     grid-template-rows: 40px 40px 40px 40px 80px; 
     gap: 20px;
   }
+}
+.packs__container{
+  align-content: center;
+  position: relative;
+}
+.packs__container__effect {
+  color: #f3c355;
+  width: fit-content;
+  height: fit-content;
+  margin: auto;
+  margin-top: 20vh;
+}
+.tittle_random{
+  padding: 3vh;
+}
+.random_packs{
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.pack img{
+  width: 100%; 
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+.pack{
+  position: relative;
+  height: 300px;
+}
+.pack .overlay{
+  position: absolute;
+  padding-left: 5%;
+  padding-bottom: 5%;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); 
+  color:#E6C067;
+  opacity: 0;
+  transition: opacity 0.3s ease; 
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.pack:hover .overlay {
+  opacity: 1; /* Hacer visible cuando se hace hover */
+}
+.cont_over{
+  height: fit-content;
+  text-align: left;
+}
+.pack:hover img {
+  filter: brightness(50%); /* Oscurecer la imagen cuando se hace hover */
 }

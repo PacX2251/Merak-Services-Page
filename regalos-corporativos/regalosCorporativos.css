@@ -102,21 +102,25 @@
 }
 .paquete .overlay{
   position: absolute;
-  padding-left: 10px;
-  padding-bottom: 10px;
+  padding-left: 5%;
+  padding-bottom: 5%;
+  bottom: 0;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5); 
   color:#E6C067;
   opacity: 0;
   transition: opacity 0.3s ease; 
-  text-align: left;
-  bottom: 0;
-  display: table-cell;
-  vertical-align: middle;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 .paquete:hover .overlay {
   opacity: 1; /* Hacer visible cuando se hace hover */
+}
+.cont_over{
+  height: fit-content;
+  text-align: left;
 }
 .paquete:hover img {
   filter: brightness(50%); /* Oscurecer la imagen cuando se hace hover */
