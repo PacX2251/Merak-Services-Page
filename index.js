@@ -11,3 +11,37 @@ window.addEventListener('scroll', function() {
         navbar.classList.remove('scrolled');
     }
 });
+
+let currentIndex = 0;
+const images = [
+    'img/testing carrousell/sandwich.png',
+    'img/testing carrousell/taza.png',
+    'img/testing carrousell/vino.png',
+    'img/testing carrousell/libreta.png',
+    'img/testing carrousell/fruta.png',
+    'img/testing carrousell/sandwich.png',
+    'img/testing carrousell/taza.png',
+    // add more images as needed
+];
+const carousel = document.getElementById('carousel');
+
+function loadImages() {
+    images.forEach(src => {
+        const img = document.createElement('img');
+        img.src = src;
+        carousel.appendChild(img);
+    });
+}
+
+function moveCarousel(direction) {
+    const totalImages = images.length;
+    currentIndex += direction;
+    if (currentIndex >= totalImages) {
+        currentIndex = 0;
+    } else if (currentIndex < 0) {
+        currentIndex = totalImages - 1;
+    }
+    carousel.style.transform = `translateX(${-451 * currentIndex}px)`;
+}
+
+document.addEventListener('DOMContentLoaded', loadImages);

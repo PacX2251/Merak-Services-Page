@@ -1,3 +1,16 @@
+@keyframes goUp{ /* Animacion del titulo e imagen About Us */
+  0% {
+      opacity: 0;
+      bottom: -100px; 
+      transform: translateY(100%);
+  }
+  100% {
+      opacity: 1; 
+      bottom: 20px; 
+      transform: translateY(0%);
+  }
+}
+
 .contact__container {
   display: flex;
   width: 100%;
@@ -16,6 +29,21 @@
   width: 50vw;
   height: 100vh;
   padding: 4rem 7rem;
+}
+.conctact__title{
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+.conctact__title.visible{
+  transition: 1.25s ease;
+  animation: goUp 1s ease forwards;
+}
+.contact__description {
+  margin-bottom: 20px;
+}
+.contact__description.visible{
+  transition: 1.25s ease;
+  animation: goUp 1s ease forwards;
 }
 .contact__form {
   display: flex;
