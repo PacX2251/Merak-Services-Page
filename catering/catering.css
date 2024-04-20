@@ -1,0 +1,128 @@
+@import url("https://fonts.cdnfonts.com/css/cmu-serif");
+
+/* Css Catering*/
+.main_title_catering{
+  text-align: center;
+}
+.nav_category {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content:center;
+  align-items: center;
+
+}
+.navbar__links_category {
+  text-decoration: none;
+  color: #f3c355;
+  font-size: 1.2rem;
+  padding: 20px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #f3c355;
+}
+.navbar__links_categoryactive {
+  background-color: rgba(94, 91, 91, 0.37);
+  /* Aplica el tachado al enlace "Nosotros" si ha sido visitado */
+}
+.gifts__container{
+  align-content: center;
+}
+.gifts__container__effect {
+  align-content: center;
+  width: fit-content;
+  margin: auto;
+  margin-top: 20vh;
+  
+  view-timeline-name: --gifts;
+  view-timeline-axis: block;
+  
+  animation-timeline: --gifts;
+  animation-name: grow;
+  animation-range: entry 10% cover 10%;
+  animation-fill-mode: both;
+}
+.navRute{
+  display: flex;
+  color: #f3c355;
+  padding-bottom: 3vh;
+}
+.paquetes__mosaico{
+  display: flex;
+  gap: 20px;
+}
+.column{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.paquete img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.s{
+  height: 150px;
+}
+.m{
+  height: 200px;
+}
+.l{
+  height: 250px;
+}
+@media(max-width:1560px){
+  .s{
+    height: 90px;
+  }
+  .m{
+    height: 140px;
+  }
+  .l{
+    height: 190px;
+  }
+}
+@media(max-width:650px){
+  .s{
+    height: 150px;
+  }
+  .m{
+    height: 150px;
+  }
+  .l{
+    height: 150px;
+  }
+  .paquetes__mosaico{
+    flex-direction: column;
+  }
+}
+.paquete{
+  position: relative;
+}
+.paquete .overlay{
+  position: absolute;
+  padding-left: 5%;
+  padding-bottom: 5%;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); 
+  color:#E6C067;
+  opacity: 0;
+  transition: opacity 0.3s ease; 
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.paquete:hover .overlay {
+  opacity: 1; /* Hacer visible cuando se hace hover */
+}
+.cont_over{
+  height: fit-content;
+  text-align: left;
+}
+.paquete:hover img {
+  filter: brightness(50%); /* Oscurecer la imagen cuando se hace hover */
+}
+/*# sourceMappingURL=servicios.css.map */
