@@ -4,7 +4,7 @@
     width: 100%;
     height: 100vh;
     font-family: 'CMU Serif', 'Times New Roman', Times, serif;
-    color: #f3c355;
+    color: #E6C067;
     
   }
   &__left-col {
@@ -36,13 +36,13 @@
   }
   input, textarea {
     &::placeholder { 
-        color: #f3c355; 
+        color: #E6C067; 
         opacity: 1;
     }
-    color:#f3c355;
+    color:#E6C067;
     background: transparent;
     border: none;
-    border-bottom: 1px solid #f3c355;
+    border-bottom: 1px solid #E6C067;
     padding: 0.5rem ;
     outline: none
   }
@@ -52,10 +52,10 @@
     align-items: center;
     justify-content: center;
     background: transparent;    
-    color: #f3c355;
+    color: #E6C067;
     width: 10rem;
     height: 2.25rem;
-    border: 1px solid #f3c355;
+    border: 1px solid #E6C067;
     border-radius: 1px;
     outline: none;
     cursor: pointer;

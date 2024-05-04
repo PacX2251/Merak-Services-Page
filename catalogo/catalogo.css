@@ -1,4 +1,4 @@
-@keyframes grow { /* Animacion de aparicion al cargar el contenido */
+/*@keyframes grow { /* Animacion de aparicion al cargar el contenido
   from { 
     opacity: 0;
     scale: 25%;
@@ -7,7 +7,7 @@
     opacity: 1;
     scale: 100%;
   }
-}
+}*/
 
 .experiences__container{
   view-timeline-name: --expeeriences;
@@ -17,6 +17,7 @@
   animation-name: grow;
   animation-range: entry 25% cover 50%;
   animation-fill-mode: both;
+  background: linear-gradient(to bottom, #242424 0%, #000000 15%, #000000 100%);
 }
 .experiences__img {
   background-size: cover;

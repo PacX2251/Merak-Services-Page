@@ -20,7 +20,9 @@
       transform: translateY(0%);
   }
 }
-
+.about-us__container {
+  background: linear-gradient(to bottom, #242424 0%, #000000 15%, #000000 100%);
+}
 .about-us__container__effect {
   width: 100%;
   height: fit-content;

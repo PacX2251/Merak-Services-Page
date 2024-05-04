@@ -11,15 +11,14 @@
   flex-direction: row;
   justify-content:center;
   align-items: center;
-
 }
 .navbar__links_category {
   text-decoration: none;
-  color: #f3c355;
+  color: #E6C067;
   font-size: 1.2rem;
   padding: 20px;
   padding-bottom: 5px;
-  border-bottom: 1px solid #f3c355;
+  border-bottom: 1px solid #E6C067;
 }
 .navbar__links_categoryactive {
   background-color: rgba(94, 91, 91, 0.37);
@@ -27,6 +26,7 @@
 }
 .gifts__container{
   align-content: center;
+  background: linear-gradient(to bottom, #242424 0%, #000000 15%, #000000 100%);
 }
 .gifts__container__effect {
   align-content: center;
@@ -44,7 +44,7 @@
 }
 .navRute{
   display: flex;
-  color: #f3c355;
+  color: #E6C067;
   padding-bottom: 3vh;
 }
 .paquetes__mosaico{
