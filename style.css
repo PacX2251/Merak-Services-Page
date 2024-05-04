@@ -323,62 +323,51 @@ body{
   }
 }
 
-.carousel-container {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-}
-
-.carousel {
-  display: flex;
-  width: 100%;
-  transition: transform 0.5s ease-in-out;
-}
-
-.carousel img {
-  width: 451px;
-  height: 451px;
-  object-fit: cover;
-}
-
-.carousel::before, .carousel::after {
-  content: '';
+.owl-nav {
   position: absolute;
-  top: 0;
-  width: 100px;
-  height: 100%;
-  z-index: 2;
-  background: linear-gradient(to right, rgba(0,0,0,1), rgba(0,0,0,0));
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
-
-.carousel::after {
-  right: 0;
-  background: linear-gradient(to left, rgba(0,0,0,1), rgba(0,0,0,0));
-}
-
-.carousel-arrow {
+.owl-carousel .owl-nav button.owl-prev,
+.owl-carousel .owl-nav button.owl-next {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  font-size: 24px;
-  color: gold;
-  background-color: black; /* Adjust color as needed */
-  border-radius: 50%;
-  cursor: pointer;
-  z-index: 3;
-  width: 30px;
-  height: 30px;
+  width: 60px !important;
+  height: 60px !important;
+  border: 2px solid #E6C067 !important; /* Borde dorado */
+  border-radius: 50% !important; /* Botón redondo */
+  background: rgba(0, 0, 0, 0.5) !important;
   display: flex;
   align-items: center;
   justify-content: center;
+  color: #E6C067 !important; /* Color del ícono */
 }
-
-.left-arrow {
-  left: 10px;
+.owl-nav .owl-prev {
+  left: 10px; /* Aumenta para mover la flecha hacia adentro desde el borde izquierdo */
 }
-
-.right-arrow {
-  right: 10px;
+.owl-nav .owl-next {
+  right: 10px; /* Aumenta para mover la flecha hacia adentro desde el borde derecho */
+}
+.owl-nav i {
+  margin: auto; /* Centra el icono dentro del botón */
+  font-size: 30px;
+}
+.owl-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto; /* La altura se ajusta automáticamente */
+}
+.owl-item img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover; /* Asegura que la imagen cubra el ítem */
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1; /* Mantiene las imágenes como cuadrados */
 }
 
 .footer__container {
