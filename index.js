@@ -12,36 +12,26 @@ window.addEventListener('scroll', function() {
     }
 });
 
-let currentIndex = 0;
-const images = [
-    'img/testing carrousell/sandwich.png',
-    'img/testing carrousell/taza.png',
-    'img/testing carrousell/vino.png',
-    'img/testing carrousell/libreta.png',
-    'img/testing carrousell/fruta.png',
-    'img/testing carrousell/sandwich.png',
-    'img/testing carrousell/taza.png',
-    // add more images as needed
-];
-const carousel = document.getElementById('carousel');
-
-function loadImages() {
-    images.forEach(src => {
-        const img = document.createElement('img');
-        img.src = src;
-        carousel.appendChild(img);
+$(document).ready(function(){
+    $(".owl-carousel").owlCarousel({
+        loop: true, // Bucle infinito
+        margin: 0,
+        nav: true, // Habilita la navegación
+        dots: false,
+        navText: [
+            '<i class="fa fa-chevron-left"></i>',
+            '<i class="fa fa-chevron-right"></i>'
+        ], // Usa Font Awesome para los iconos de las flechas
+        responsive:{
+            0:{
+                items:1
+            },
+            600:{
+                items:3
+            },
+            1000:{
+                items:5
+            }
+        }
     });
-}
-
-function moveCarousel(direction) {
-    const totalImages = images.length;
-    currentIndex += direction;
-    if (currentIndex >= totalImages) {
-        currentIndex = 0;
-    } else if (currentIndex < 0) {
-        currentIndex = totalImages - 1;
-    }
-    carousel.style.transform = `translateX(${-451 * currentIndex}px)`;
-}
-
-document.addEventListener('DOMContentLoaded', loadImages);
+});
