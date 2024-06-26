@@ -104,7 +104,7 @@ function loadImages() {
     const img = document.createElement("img");
     img.src = src;
     img.classList.add("paquete__img");
-    img.alt = "Paquete";
+    img.alt = title;
     packageElement.appendChild(img);
 
     const overlay = document.createElement("div");
