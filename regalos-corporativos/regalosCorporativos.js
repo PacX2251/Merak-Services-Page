@@ -157,7 +157,7 @@ packing = {
 cargarGrid(chosenPack, packing);
 random_img(chosenPack, packing);
 
-  function cargarGrid(productoIndex, packing) {
+function cargarGrid(productoIndex, packing) {
      // Base de datos
 
     var ruteContainer = document.getElementById('navRute');
@@ -207,7 +207,10 @@ function random_img(randomImg,db){
   var packs = ['p1','p2','p3','p4','p5','p6','p7','p8','p9','p10','p11','p12'];
   var comp = true;
   var packsChosen = [];
+  var chosenPack = localStorage.getItem('chosenPack');
   packsChosen.push(chosenPack);
+
+  console.log("PacksChosen:", packsChosen);
 
   for (var j = 0; j < 3;){
     var randpack = packs[Math.floor(Math.random() * packs.length)];
@@ -224,12 +227,15 @@ function random_img(randomImg,db){
     comp = true;
   }
 
+  var packsChosenWQM = packsChosen.map(elemento => `'${elemento}'`);
   for (var i = 1; i <= 3; i++) {
     var imagenUrl = packing[packsChosen[i]].imagenes[0];
     var name = packing[packsChosen[i]].nombre;
     var randItem = document.createElement('div');
     randItem.classList.add('pack');
-    randItem.innerHTML = '<div class="pack"><a href="../regalos-corporativos/paquetesRC.html" onclick="captureParentName('+packsChosen[i]+')"><img src="'+imagenUrl+'" class="paquete__img" alt="'+name+'"/><div class="overlay"><div class="cont_over"><svg xmlns="http://www.w3.org/2000/svg"width="150" height="2" viewBox="0 0 150 2" fill="none"><path d="M2 2L150 2" stroke="#E6C067" stroke-width="3"/></svg><h3>'+name+'</h3><p>'+name+'</p></div></div></a></div>';
+    randItem.innerHTML = '<div class="pack"><a href="../regalos-corporativos/paquetesRC.html" onclick="captureParentName('+packsChosenWQM[i]+')"><img src="'+imagenUrl+'" class="paquete__img" alt="'+name+'"/><div class="overlay"><div class="cont_over"><svg xmlns="http://www.w3.org/2000/svg"width="150" height="2" viewBox="0 0 150 2" fill="none"><path d="M2 2L150 2" stroke="#E6C067" stroke-width="3"/></svg><h3>'+name+'</h3><p>'+name+'</p></div></div></a></div>';
+    console.log('<div class="pack"><a href="../regalos-corporativos/paquetesRC.html" onclick="captureParentName('+packsChosenWQM[i]+')"><img src="'+imagenUrl+'" class="paquete__img" alt="'+name+'"/><div class="overlay"><div class="cont_over"><svg xmlns="http://www.w3.org/2000/svg"width="150" height="2" viewBox="0 0 150 2" fill="none"><path d="M2 2L150 2" stroke="#E6C067" stroke-width="3"/></svg><h3>'+name+'</h3><p>'+name+'</p></div></div></a></div>');
     randContainer.appendChild(randItem);
   }
+  
 }
