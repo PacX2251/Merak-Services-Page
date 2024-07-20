@@ -8,9 +8,7 @@ console.log("Category Chosen:", catChosen);
 
 async function fetchData() {
   try {
-    const response = await fetch(
-      "http://localhost:3000/articulos-promocionales"
-    );
+    const response = await fetch("http://localhost:3000");
     const data = await response.json();
     console.log(data);
     // empty();

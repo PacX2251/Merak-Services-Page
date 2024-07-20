@@ -11,7 +11,7 @@ app.use((req, res, next) => {
   next();
 });
 
-app.get("/articulos-promocionales", (req, res) => {
+app.get("/", (req, res) => {
   const filePath = path.join(__dirname, "data", "productos.json");
 
   fs.readFile(filePath, "utf8", (err, data) => {
