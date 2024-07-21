@@ -10,7 +10,7 @@ async function fetchData() {
   try {
     const response = await fetch("http://localhost:3000");
     const data = await response.json();
-    console.log(data);
+    console.log("Valor: ", data["1_1"].producto);
     // empty();
     // newCat(data);
   } catch (error) {
@@ -26,8 +26,3 @@ function empty() {
   mosContainer.innerHTML = "";
 }
 
-function newCat(data) {
-  for (const id in data) {
-    console.log("Valor: ", data[id]);
-  }
-}
